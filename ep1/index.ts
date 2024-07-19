@@ -5,3 +5,9 @@ var อยากกลับบ้านไหม: boolean = true
 console.log(firstname)
 console.log (y)
 console.log(อยากกลับบ้านไหม)
+
+const a: number = 5
+const b: number = 9
+console.log(a === b)
+console.log(a > b)
+console.log(a <= b)
