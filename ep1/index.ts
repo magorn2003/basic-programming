@@ -11,3 +11,8 @@ const b: number = 9
 console.log(a === b)
 console.log(a > b)
 console.log(a <= b)
+
+
+function add (a: number, b: number) {
+    return a + b
+}
