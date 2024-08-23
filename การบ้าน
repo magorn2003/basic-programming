@@ -1,0 +1,51 @@
+interface Criterion {
+    weight: number; 
+    height: number; 
+}
+function BMI(criterion: Criterion): number {
+    const { weight, height } = criterion;
+    const heightInMeters = height / 100; 
+    const bmi = weight / (heightInMeters * heightInMeters);
+    return bmi; 
+}
+
+function getBMICategory(bmi: number): string {
+    if (bmi < 18.5) {
+        return "Underweight"; 
+    } else if (bmi >= 18.5 && bmi < 22.90) {
+        return "Normal weight"; 
+    } else if (bmi >= 23 && bmi < 24.90) {
+        return "Buxom"; 
+    } else if (bmi >= 25 && bmi < 29.90) {
+        return "Overweight"; 
+    } else {
+        return "Very fat"; 
+    }
+}
+
+function getInput(promptText: string): number {
+    const input = prompt(promptText);
+    if (input !== null) {
+        const parsedInput = parseFloat(input);
+        if (!isNaN(parsedInput)) {
+            return parsedInput;
+        }
+        throw new Error("Input is not a valid number");
+    }
+    throw new Error("Input was canceled or is null");
+}
+
+function main() {
+    try {
+        const height = getInput("Please enter your height in cm:"); 
+        const weight = getInput("Please enter your weight in kg:"); 
+        const criterion: Criterion = { weight, height };
+        const bmi = BMI(criterion);
+        const category = getBMICategory(bmi);
+
+        console.log(`BMI: ${bmi.toFixed(2)}, Category: ${category}`);
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+main();
