@@ -1,0 +1,23 @@
+Firstname: 'Jeda',
+Lastname: 'Kim',
+Age: 21,
+Tel: '0800000000',
+Gender: 'female',
+Address: '15/5',
+Village:7,
+Road: 'serithai',
+District: 'bangkapi',
+Province: 'Bangkok', PostalCode: 12345,
+Mail:'Nina3012@gmail.com',
+//ชื่อ : Jeda
+//นามสกุล: Kim
+//อายุ : 21
+//เบอร์โทร : 0800000000
+//wr: female
+//ที่อยู่ : 15/5
+//หมู่บ้าน : 7
+//ถนน : serithai
+//เขต : bangkapi
+//จังหวัด : Bangkok
+//รหัสไปรษณีย์ : 12345
+//เมล:Nina3012@gmail.com
